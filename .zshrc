@@ -7,11 +7,10 @@ export ZSH="/home/originalang/.oh-my-zsh"
 # load a random theme each time oh-my-zsh is loaded, in which case,
 # to know which specific one was loaded, run: echo $RANDOM_THEME
 # See https://github.com/ohmyzsh/ohmyzsh/wiki/Themes
-ZSH_THEME="spaceship"
+ZSH_THEME="agnoster"
 
 HYPHEN_INSENSITIVE="true"
 ENABLE_CORRECTION="true"
-COMPLETION_WAITING_DOTS="true"
 
 # Which plugins would you like to load?
 # Standard plugins can be found in ~/.oh-my-zsh/plugins/*
@@ -19,6 +18,9 @@ COMPLETION_WAITING_DOTS="true"
 # Example format: plugins=(rails git textmate ruby lighthouse)
 # Add wisely, as too many plugins slow down shell startup.
 plugins=(git)
+
+# load localrc if it exists
+[ -f ~/.localrc ] && source ~/.localrc;
 
 source $ZSH/oh-my-zsh.sh
 
@@ -34,5 +36,3 @@ fi
 # load aliases
 source $SYMLINK_DIR/aliases
 
-# load localrc if it exists
-[ -f ~/.localrc ] && source ~/.localrc; return 0;
