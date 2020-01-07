@@ -1,4 +1,4 @@
-SYMLINK_DIR=$(dirname "$(readlink -f "$0")")
+SYMLINK_DIR=$(dirname "$(readlink -f .bashrc)")
 
 # ~/.bashrc: executed by bash(1) for non-login shells.
 # see /usr/share/doc/bash/examples/startup-files (in the package bash-doc)

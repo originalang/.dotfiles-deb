@@ -1,4 +1,4 @@
-SYMLINK_DIR=$(dirname "$(readlink -f "$0")")
+SYMLINK_DIR=$(dirname $(readlink -f .zshrc))
 
 # Path to your oh-my-zsh installation.
 export ZSH="/home/originalang/.oh-my-zsh"
@@ -35,4 +35,3 @@ fi
 
 # load aliases
 source $SYMLINK_DIR/aliases
-
