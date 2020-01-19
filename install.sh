@@ -62,7 +62,7 @@ install htop
 install imagemagick
 install nodejs
 install npm
-
+install fonts-hack
 
 #-------------------#
 # zsh configuration #
