@@ -41,12 +41,10 @@ install() {
 				else
 					echo "${RED}⚠️ There was an error while installing ${YELLOW}$PACKAGE"
 				fi
-
-				break;;
-
+				;;
 			[Nn]* )
 				echo "${BLUE}👍 ${RESET}Skipping $PACKAGE";
-				break;;
+				;;
 		esac
 	fi
 }
@@ -63,6 +61,8 @@ install imagemagick
 install nodejs
 install npm
 install fonts-hack
+install vlc
+install virtualenv
 
 #-------------------#
 # zsh configuration #
