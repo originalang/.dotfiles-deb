@@ -21,6 +21,7 @@ Plugin 'scrooloose/nerdtree'
 Plugin 'vim-airline/vim-airline'
 Plugin 'airblade/vim-gitgutter'
 Plugin 'NLKNguyen/papercolor-theme'
+Plugin 'junegunn/goyo.vim'
 
 " All plugins must be added before this line
 call vundle#end()
@@ -32,7 +33,7 @@ let python_highlight_all=1
 filetype plugin on
 syntax on
 
-"Paper color scheme config
+" Paper color scheme setup
 let g:PaperColor_Theme_Options = {
   \   'theme': {
   \     'default': {
@@ -67,6 +68,9 @@ let g:airline#extensions#tabline#left_sep=''
 map <silent> <C-n> :NERDTreeToggle<cr>
 autocmd StdinReadPre * let s:std_in=1
 autocmd VimEnter * if argc() == 0 && !exists("s:std_in") | NERDTree | endif
+
+" Goyo setup
+map <silent> <C-z> :Goyo<cr>
 
 " line numbers
 set nu
