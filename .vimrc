@@ -18,12 +18,9 @@ Plugin 'VundleVim/Vundle.vim'
 
 """" PLUGINS
 Plugin 'scrooloose/nerdtree'
-Plugin 'vim-syntastic/syntastic'
-Plugin 'ctrlpvim/ctrlp.vim'
 Plugin 'vim-airline/vim-airline'
 Plugin 'airblade/vim-gitgutter'
-Plugin 'fatih/vim-go'
-Plugin 'gabrielelana/vim-markdown'
+Plugin 'NLKNguyen/papercolor-theme'
 
 " All plugins must be added before this line
 call vundle#end()
@@ -34,6 +31,24 @@ filetype plugin indent on	" required
 let python_highlight_all=1
 filetype plugin on
 syntax on
+
+"Paper color scheme config
+let g:PaperColor_Theme_Options = {
+  \   'theme': {
+  \     'default': {
+  \       'transparent_background': 1
+  \     }
+  \   },
+  \   'language': {
+  \     'python': {
+  \       'highlight_builtins' : 1
+  \     }
+  \	  }
+  \ }
+
+set t_Co=256
+set background=dark
+colorscheme PaperColor
 
 " airline setup
 set laststatus=2
@@ -67,4 +82,3 @@ map <Left> <NOP>
 map <Right> <NOP>
 
 inoremap jj <Esc>
-colorscheme slate
